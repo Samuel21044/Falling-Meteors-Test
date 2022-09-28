@@ -7,5 +7,4 @@ Feel free to change, programm, and make my game better for your own purposes.
 
 Thank you for visiting my game and I hope you like it!
 
-Stackblitz link here- 
-Game Tab here-        
+Game Tab here- https://js-qebvxp.stackblitz.io/
