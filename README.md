@@ -6,3 +6,6 @@ This is one of my first games that I am making public. I am 13 years old and lik
 Feel free to change, programm, and make my game better for your own purposes.
 
 Thank you for visiting my game and I hope you like it!
+
+Stackblitz link here- 
+Game Tab here-        
