@@ -10,7 +10,6 @@ export default class fallingBlocks {
 
   moveDown() {
     this.speed = this.maxSpeed;
-    
   }
   stop() {
     this.speed = 0;
