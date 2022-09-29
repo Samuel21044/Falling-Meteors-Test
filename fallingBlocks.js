@@ -7,9 +7,10 @@ export default class fallingBlocks {
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
   }
-  
+
   moveDown() {
     this.speed = this.maxSpeed;
+    
   }
   stop() {
     this.speed = 0;
