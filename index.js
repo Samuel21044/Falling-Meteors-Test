@@ -6,7 +6,7 @@ import Game from './game.js'
 let canvas = document.getElementById("screen");
 let ctx = canvas.getContext("2d");
 let game = new Game();
-f
+
 //loop
 let lastTime = 0;
 function loop(timeStamp){
