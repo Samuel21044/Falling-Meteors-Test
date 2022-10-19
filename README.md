@@ -1,4 +1,4 @@
-# Avoid-Falling-Blocks-game-thing
+# Falling Meteors Test
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-qebvxp)
  
