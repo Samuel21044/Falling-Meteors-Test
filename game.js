@@ -1,3 +1,10 @@
+/**
+ I have an idea. So when an asteroid hits you, it creates a sound, then some red sparks come out of it. 
+ Then after a set delay it brings you to the home screen. Without the death text. It will tell you your score, and how many points you have. 
+ Then when you go to the shop it will still say how many coins you have in some corner. Then you can purchase things.
+ */
+
+
 //importing stuff
 import player from './player.js';
 import keyboard from './keyInput.js';
