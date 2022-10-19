@@ -57,6 +57,17 @@ export default class Game {
           //displays the saved score of the player
           this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
+          if (this.Score > this.highScore) {
+            //saves the score of the player
+            saveScore(this);
+          }
+
+          //check if score is undefined
+          if(this.highScore === null) {
+            this.highScore = 100;
+            this.Score = 100;
+          }
+
           //scores and such
           ctx.fillStyle = 'orange';
           ctx.textAlign = 'center';
@@ -69,11 +80,6 @@ export default class Game {
           //score
           ctx.fillText('Score: ' + parseFloat(this.Score), 375, 280);
           ctx.fillText('High Score: ' + parseFloat(this.highScore), 375, 320);
-
-          if (this.Score > this.highScore) {
-            //saves the score of the player
-            saveScore(this);
-          }
 
           //player
           this.Player.update(deltaTime); this.Player.draw(ctx);
