@@ -64,8 +64,7 @@ export default class Game {
 
           //check if score is undefined
           if(this.highScore === null) {
-            this.highScore = 100;
-            this.Score = 100;
+            this.highScore = 0;
           }
 
           //scores and such
