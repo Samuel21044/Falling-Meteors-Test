@@ -10,8 +10,9 @@ export default class keyboard {
             player.moveRight();
           break;
         case 13:
-            game.gamestate = 2;
-            game.Score = 0;
+            if(game.gamestate === 1) {
+              game.gamestate = 2;
+            }
           break;
       }
     });
