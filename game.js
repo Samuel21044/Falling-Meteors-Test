@@ -55,7 +55,7 @@ export default class Game {
         break;
       case 1:
           //displays the saved score of the player
-          this.highScore = JSON.parse(localStorage.getItem('savedScoreFSTest'));
+          this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
           //scores and such
           ctx.fillStyle = 'orange';
