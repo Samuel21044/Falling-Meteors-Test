@@ -129,7 +129,7 @@ export default class Game {
         break;
     }
   }
-  draw() {
+  draw(ctx) {
     switch(this.gamestate) {
       case 1:
           //displays the saved score of the player

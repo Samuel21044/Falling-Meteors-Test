@@ -17,6 +17,7 @@ function loop(timeStamp){
   ctx.fillRect(0, 0, 1350, 640);
 
   game.update(dt, ctx);
+  game.draw(ctx);
 
   requestAnimationFrame(loop);
 }
