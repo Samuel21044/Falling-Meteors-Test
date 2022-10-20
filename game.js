@@ -25,7 +25,7 @@ const GAMESTAE = {
 
 export default class Game {
   constructor() {
-    this.gamestate = GAMESTAE.MENU;
+    this.gamestate = GAMESTAE.SHOP;
     //blocks
     this.newBlock = true;
     this.FallingBlocks = new fallingBlocks();
@@ -43,7 +43,7 @@ export default class Game {
     this.highScore = 0;
 
     //points
-    this.pointsScored = this.Score;
+    this.pointsScored = 0;
     this.totalPoints = 0;
 
     //buttons 
@@ -123,17 +123,24 @@ export default class Game {
           this.Player.update(deltaTime); this.Player.draw(ctx);
         break;
       case 3:
-        //buttons
-        this.shopB1.shop1Update(); this.shopB1.draw(ctx);
-        this.shopB2.shop2Update(); this.shopB2.draw(ctx);
-        this.shopB3.shop3Update(); this.shopB3.draw(ctx);
-        this.goBack.goBackUpdate(); this.goBack.draw(ctx);
+          //buttons
+          this.shopB1.shop1Update(); this.shopB1.draw(ctx);
+          this.shopB2.shop2Update(); this.shopB2.draw(ctx);
+          this.shopB3.shop3Update(); this.shopB3.draw(ctx);
+          this.goBack.goBackUpdate(); this.goBack.draw(ctx);
 
-        //items
-        for(let i = 0; i < this.shopItems.length; i++) {
+          //items
+          for(let i = 0; i < this.shopItems.length; i++) {
             this.shopItems[i].update();
             this.shopItems[i].draw(ctx);
           }
+
+          //points
+          ctx.fillStyle = 'orange';
+          ctx.font = '22px Arial';
+          ctx.textAlign = 'left';
+          ctx.fillText('Points Scored: ' + this.pointsScored,35, 60);
+          ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
         break;
     }
   }

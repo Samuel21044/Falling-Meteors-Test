@@ -27,6 +27,10 @@ export default class fallingBlocks {
     if(collisionDetection(2, 0, 0, this, player)) {
       blockArray.length = [];
       game.gamestate = 1;
+
+      //adding points
+      game.pointsScored = game.Score;
+      game.totalPoints += game.pointsScored;
     }
   }
   draw(ctx) {
