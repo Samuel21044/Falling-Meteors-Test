@@ -1,3 +1,6 @@
+/*so basically for the pause
+I have a list that 
+*/
 export default class keyboard {
   constructor (player, game) {
 

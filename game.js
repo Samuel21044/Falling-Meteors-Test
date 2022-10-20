@@ -37,7 +37,7 @@ export default class Game {
   constructor() {
     this.gamestate = GAMESTAE.MENU;
     this.paused = false;
-    
+
     //blocks
     this.newBlock = true;
     this.FallingBlocks = new fallingBlocks();
@@ -71,7 +71,6 @@ export default class Game {
 
     ];
   }
-
   update(deltaTime, ctx) {
     switch(this.gamestate) {
       case 1:
