@@ -1,17 +1,18 @@
 export default class star{
   constructor(x, y) {
     this.x = x; this.y = y;
+    this.size = 5;
   }
 
   draw(ctx) {
     ctx.fillStyle = 'white';
-    ctx.fillRect(this.x, this.y, 5, 5);
+    ctx.fillRect(this.x, this.y, this.size, this.size);
   }
 }
 
 let stars = [];
-for(let i = 0; i < 500; i++) {
-  stars.push(new star(Math.floor(Math.random() * 1350), Math.floor(Math.random() * 640)));
+for(let i = 0; i < 100; i++) {
+  stars.push(new star(Math.floor(Math.random() * 750), Math.floor(Math.random() * 640)));
 }
 
 export function mainBackground(ctx) {
