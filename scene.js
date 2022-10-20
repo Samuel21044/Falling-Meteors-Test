@@ -22,6 +22,8 @@ let sun = [];
 for(let i = 0; i < 400; i++) {
   sun.push(new star(Math.floor(Math.random() * 750) / i, Math.floor(Math.random() * 500) / i));
 }
+
+//function scenes
 export function mainBackground(ctx) {
   //stars and sun
   for(let i = 0; i < stars.length; i++) {
