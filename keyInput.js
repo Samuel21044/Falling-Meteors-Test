@@ -1,5 +1,6 @@
 /*so basically for the pause
-I have a list that 
+I have a list that contains 1 and 2. 1 represents if its paused and 2 represents if its off. 
+Then if 1 AND 2 are both in the list, meaning 
 */
 export default class keyboard {
   constructor (player, game) {
