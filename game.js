@@ -107,23 +107,15 @@ export default class Game {
         break;
       case 3:
           //buttons
-          this.shopB1.shop1Update(); this.shopB1.draw(ctx);
-          this.shopB2.shop2Update(); this.shopB2.draw(ctx);
-          this.shopB3.shop3Update(); this.shopB3.draw(ctx);
-          this.goBack.goBackUpdate(); this.goBack.draw(ctx);
+          this.shopB1.shop1Update(); 
+          this.shopB2.shop2Update();
+          this.shopB3.shop3Update(); 
+          this.goBack.goBackUpdate(); 
 
           //items
           for(let i = 0; i < this.shopItems.length; i++) {
             this.shopItems[i].update();
-            this.shopItems[i].draw(ctx);
           }
-
-          //points
-          ctx.fillStyle = 'orange';
-          ctx.font = '22px Arial';
-          ctx.textAlign = 'left';
-          ctx.fillText('Points Scored: ' + this.pointsScored,35, 60);
-          ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
         break;
     }
   }
@@ -167,6 +159,20 @@ export default class Game {
           this.Player.draw(ctx);
         break;
       case 3:
+          //buttons
+          this.shopB1.draw(ctx); this.shopB2.draw(ctx); this.shopB3.draw(ctx); this.goBack.draw(ctx);
+
+          //items
+          for(let i = 0; i < this.shopItems.length; i++) {
+            this.shopItems[i].draw(ctx);
+          }
+          
+          //points
+          ctx.fillStyle = 'orange';
+          ctx.font = '22px Arial';
+          ctx.textAlign = 'left';
+          ctx.fillText('Points Scored: ' + this.pointsScored,35, 60);
+          ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
         break;
     }
   }
