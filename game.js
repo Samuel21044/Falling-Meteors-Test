@@ -7,6 +7,9 @@
  I need to change the UI for the death screen
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the thing
+
+ I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
+ Altho I dont know if I want the stars to be 
  */
 
 
