@@ -20,6 +20,9 @@ import fallingBlocks from './fallingBlocks.js';
 import Button from './button.js';
 import Shop from './shop.js';
 
+//scenes
+export { mainBackground } from './scene.js';
+
 //save file
 import { saveScore } from './save.js';
 
@@ -73,6 +76,7 @@ export default class Game {
       case 0:
         break;
       case 1:
+  
           //displays the saved score of the player
           this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
