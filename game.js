@@ -30,7 +30,7 @@ const GAMESTAE = {
 
 export default class Game {
   constructor() {
-    this.gamestate = GAMESTAE.SHOP;
+    this.gamestate = GAMESTAE.MENU;
     //blocks
     this.newBlock = true;
     this.FallingBlocks = new fallingBlocks();
