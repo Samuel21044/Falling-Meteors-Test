@@ -103,12 +103,7 @@ export default class Game {
           }
 
           //updating other objects n stuff
-          this.Player.update(deltaTime); this.Player.draw(ctx);
-
-          mainBackground(ctx);
-          for (let i = 0; i < this.fallingBlocksL.length; i++) {
-            this.fallingBlocksL[i].draw(ctx);
-          }
+          this.Player.update(deltaTime);
         break;
       case 3:
           //buttons
@@ -165,6 +160,11 @@ export default class Game {
           this.shop.draw(ctx);
         break;
       case 2:
+          mainBackground(ctx);
+          for (let i = 0; i < this.fallingBlocksL.length; i++) {
+            this.fallingBlocksL[i].draw(ctx);
+          }
+          this.Player.draw(ctx);
         break;
       case 3:
         break;
