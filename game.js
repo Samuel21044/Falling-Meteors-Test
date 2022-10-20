@@ -76,7 +76,6 @@ export default class Game {
       case 0:
         break;
       case 1:
-  
           //displays the saved score of the player
           this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
@@ -154,6 +153,16 @@ export default class Game {
           ctx.textAlign = 'left';
           ctx.fillText('Points Scored: ' + this.pointsScored,35, 60);
           ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
+        break;
+    }
+  }
+  draw() {
+    switch(this.gamestate) {
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
         break;
     }
   }
