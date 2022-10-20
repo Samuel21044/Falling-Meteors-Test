@@ -21,7 +21,7 @@ import Button from './button.js';
 import Shop from './shop.js';
 
 //scenes
-export { mainBackground } from './scene.js';
+import { mainBackground } from './scene.js';
 
 //save file
 import { saveScore } from './save.js';
@@ -110,6 +110,7 @@ export default class Game {
           this.shop.shopUpdate(); this.shop.draw(ctx);
         break;
       case 2:
+          mainBackground(ctx);
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
