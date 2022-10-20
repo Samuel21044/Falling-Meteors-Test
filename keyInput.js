@@ -24,7 +24,9 @@ export default class keyboard {
             }
           break;
         case 27:
-            game.paused = true;
+          if(game.paused) {
+            game.paused = false;
+          }
           break;
       }
     });
@@ -42,6 +44,11 @@ export default class keyboard {
           break;
         case 68:
             if(player.speed > 0) player.stop();
+          break;
+        case 27:
+            if(!game.paused) {
+              game.paused = true;
+            }
           break;
       }
     });
