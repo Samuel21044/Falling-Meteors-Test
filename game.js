@@ -79,7 +79,7 @@ export default class Game {
           ctx.textAlign = 'center';
           //restart
           ctx.font = '50px Arial';
-          ctx.fillText('You Died', 375, 200);
+          ctx.fillText('Falling Meteors', 375, 200);
           ctx.font = '30px Arial';
           ctx.fillText('Press enter to play again', 375, 400);
 
