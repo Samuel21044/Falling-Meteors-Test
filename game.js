@@ -76,37 +76,10 @@ export default class Game {
       case 0:
         break;
       case 1:
-          //displays the saved score of the player
-          this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
-
-          if (this.Score > this.highScore) {
-            //saves the score of the player
-            saveScore(this);
-          }
-
-          //check if score is undefined
-          if(this.highScore === null) {
-            this.highScore = 0;
-          }
-
-          //scores and such
-          ctx.fillStyle = 'orange';
-          ctx.textAlign = 'center';
-          //restart
-          ctx.font = '50px Arial';
-          ctx.fillText('Falling Meteors', 375, 200);
-          ctx.font = '30px Arial';
-          ctx.fillText('Press enter to play again', 375, 400);
-
-          //score
-          ctx.fillText('Score: ' + parseFloat(this.Score), 375, 280);
-          ctx.fillText('High Score: ' + parseFloat(this.highScore), 375, 320);
-
           //player
-          this.Player.update(deltaTime); this.Player.draw(ctx);
-
+          this.Player.update(deltaTime); 
           //buttons
-          this.shop.shopUpdate(); this.shop.draw(ctx);
+          this.shop.shopUpdate();
         break;
       case 2:
           mainBackground(ctx);
@@ -159,6 +132,34 @@ export default class Game {
   draw() {
     switch(this.gamestate) {
       case 1:
+          //displays the saved score of the player
+          this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
+
+          if (this.Score > this.highScore) {
+            //saves the score of the player
+            saveScore(this);
+          }
+
+          //check if score is undefined
+          if(this.highScore === null) {
+            this.highScore = 0;
+          }
+
+          //scores and such
+          ctx.fillStyle = 'orange';
+          ctx.textAlign = 'center';
+          //restart
+          ctx.font = '50px Arial';
+          ctx.fillText('Falling Meteors', 375, 200);
+          ctx.font = '30px Arial';
+          ctx.fillText('Press enter to play again', 375, 400);
+
+          //score
+          ctx.fillText('Score: ' + parseFloat(this.Score), 375, 280);
+          ctx.fillText('High Score: ' + parseFloat(this.highScore), 375, 320);
+
+          this.Player.draw(ctx);
+          this.shop.draw(ctx);
         break;
       case 2:
         break;
