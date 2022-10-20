@@ -23,6 +23,9 @@ export default class keyboard {
               game.gamestate = 2;
             }
           break;
+        case 27:
+            game.paused = true;
+          break;
       }
     });
 

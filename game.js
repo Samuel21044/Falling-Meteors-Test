@@ -28,7 +28,6 @@ import { saveScore } from './save.js';
 
 //game scenes
 const GAMESTAE = {
-  PAUSED: 0,
   MENU: 1,
   RUNNING: 2,
   SHOP: 3,
@@ -37,6 +36,7 @@ const GAMESTAE = {
 export default class Game {
   constructor() {
     this.gamestate = GAMESTAE.MENU;
+    this.paused = false;
     //blocks
     this.newBlock = true;
     this.FallingBlocks = new fallingBlocks();
@@ -73,8 +73,6 @@ export default class Game {
 
   update(deltaTime, ctx) {
     switch(this.gamestate) {
-      case 0:
-        break;
       case 1:
           //player
           this.Player.update(deltaTime); 
@@ -82,7 +80,11 @@ export default class Game {
           this.shop.shopUpdate();
         break;
       case 2:
-          
+          //pause
+          if(this.paused) {
+            return;
+          }
+
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
@@ -158,6 +160,12 @@ export default class Game {
             this.fallingBlocksL[i].draw(ctx);
           }
           this.Player.draw(ctx);
+
+          //pause
+          if(this.paused) {
+            ctx.fillStyle = 'rgb(20, 20, 20, 0.5)';
+            ctx.fillRect(0, 0, 750, 640);
+          }
         break;
       case 3:
           //buttons
