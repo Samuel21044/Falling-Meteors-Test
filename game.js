@@ -42,6 +42,10 @@ export default class Game {
     this.Score = 0;
     this.highScore = 0;
 
+    //points
+    this.pointsScored = this.Score;
+    this.totalPoints = 0;
+
     //buttons 
     this.shop = new Button(this, 250, 430, 250, 45, 'Shop', 7);
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
