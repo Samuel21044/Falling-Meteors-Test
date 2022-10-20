@@ -24,8 +24,10 @@ export default class keyboard {
             }
           break;
         case 27:
-          if(game.paused) {
+          if (!game.paused) {
             game.paused = false;
+          } else {
+            game.paused = true;
           }
           break;
       }

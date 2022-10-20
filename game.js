@@ -36,6 +36,7 @@ const GAMESTAE = {
 export default class Game {
   constructor() {
     this.gamestate = GAMESTAE.MENU;
+    this.isPaused = false;
     this.paused = false;
     //blocks
     this.newBlock = true;
