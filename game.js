@@ -82,6 +82,7 @@ export default class Game {
           this.shop.shopUpdate();
         break;
       case 2:
+          
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
@@ -166,7 +167,7 @@ export default class Game {
           for(let i = 0; i < this.shopItems.length; i++) {
             this.shopItems[i].draw(ctx);
           }
-          
+
           //points
           ctx.fillStyle = 'orange';
           ctx.font = '22px Arial';
