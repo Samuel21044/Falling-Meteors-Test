@@ -2,6 +2,11 @@
  I have an idea. So when an asteroid hits you, it creates a sound, then some red sparks come out of it. 
  Then after a set delay it brings you to the home screen. Without the death text. It will tell you your score, and how many points you have. 
  Then when you go to the shop it will still say how many coins you have in some corner. Then you can purchase things.
+
+
+ I need to change the UI for the death screen
+ I need to find out how to store items in a list so that I can use one single file 
+ I need to add items into the thing
  */
 
 
