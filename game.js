@@ -82,7 +82,6 @@ export default class Game {
           this.shop.shopUpdate();
         break;
       case 2:
-          mainBackground(ctx);
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
@@ -92,7 +91,6 @@ export default class Game {
 
           //having the bullet things update
           for (let i = 0; i < this.fallingBlocksL.length; i++) {
-            this.fallingBlocksL[i].draw(ctx);
             this.fallingBlocksL[i].moveDown();
             this.fallingBlocksL[i].update(deltaTime, this.fallingBlocksL, this.Player, this);
           }
@@ -106,6 +104,11 @@ export default class Game {
 
           //updating other objects n stuff
           this.Player.update(deltaTime); this.Player.draw(ctx);
+
+          mainBackground(ctx);
+          for (let i = 0; i < this.fallingBlocksL.length; i++) {
+            this.fallingBlocksL[i].draw(ctx);
+          }
         break;
       case 3:
           //buttons
