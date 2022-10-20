@@ -8,6 +8,10 @@ export default class star{
     ctx.fillStyle = 'white';
     ctx.fillRect(this.x, this.y, this.size, this.size);
   }
+  drawSun(ctx) {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(this.x, this.y, this.size, this.size);
+  }
 }
 
 let stars = [];
