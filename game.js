@@ -262,8 +262,8 @@ export default class Game {
         //people in the company
         ctx.font = '40px Arial';
         ctx.fillText('Creators', 375, 300);
-        ctx.font = '25px Arial';
-        ctx.fillText('', 375, 360);
+        ctx.font = '21px Arial';
+        ctx.fillText('Rodrigo-Owner/Programmer    Junior-Ideas    Brody-Animator    Jack-Animator', 375, 360);
 
         //concerns
         ctx.font = '40px Arial';
