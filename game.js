@@ -1,14 +1,7 @@
 /**
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
-
-
-For the UI change I want there to be multiple buttons 3 specifically.
-One for the shop
-The second one for the controls and how to play
-The third one about and concers you may encounter when playing the game
-
-
+ 
  I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
  I also want to add a backgroiund for the menu
  */
@@ -38,7 +31,7 @@ const GAMESTAE = {
 
 export default class Game {
   constructor() {
-    this.gamestate = GAMESTAE.ABOUT;
+    this.gamestate = GAMESTAE.MENU;
     this.paused = 0;
     this.gameOver = false;
 
@@ -68,6 +61,7 @@ export default class Game {
     this.how = new Button(this, 170, 215, 60, 150, 'How', 5);
     this.about = new Button(this, 530, 215, 60, 150, 'About', 5);
     this.goBack2 = new Button(this, 275, 520, 200, 35, 'Back to Menu');
+    this.goBack3 = new Button(this, 275, 580, 200, 35, 'Back to Menu');
     //shop buttons
     this.shopB1 = new Button(this, 63.75, 140, 165, 35, 'Character', 4);
     this.shopB2 = new Button(this, 292.5, 140, 165, 35, 'Stars', 4);
@@ -134,7 +128,7 @@ export default class Game {
           this.goBack2.goBackUpdate();
         break;
       case 5:
-          this.goBack2.goBackUpdate();
+          this.goBack3.goBackUpdate();
         break;
     }
   }
@@ -272,8 +266,8 @@ export default class Game {
         ctx.fillText('If game lags consider refreshing', 375, 500);
         ctx.fillText('If you delete all your files there is a chance',375, 530);
         ctx.fillText('you may loose all data on game', 375,560);
-        
-        this.goBack2.draw(ctx);
+
+        this.goBack3.draw(ctx);
         break;
     }
   }
