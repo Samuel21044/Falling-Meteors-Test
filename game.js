@@ -66,8 +66,8 @@ export default class Game {
     //buttons 
     this.shop = new Button(this, 250, 430, 250, 45, 'Shop', 7);
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
-    this.how = new Button(this, 100, 400, 100, 100, 'How');
-    this.about = new Button(this, 550, 400, 100, 100, 'About');
+    this.how = new Button(this, 170, 215, 60, 150, 'How', 5);
+    this.about = new Button(this, 530, 215, 60, 150, 'About', 5);
     //shop buttons
     this.shopB1 = new Button(this, 63.75, 140, 165, 35, 'Character', 4);
     this.shopB2 = new Button(this, 292.5, 140, 165, 35, 'Stars', 4);
