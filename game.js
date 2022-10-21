@@ -1,21 +1,16 @@
 /**
- I have an idea. So when an asteroid hits you, it creates a sound, then some red sparks come out of it. 
- Then after a set delay it brings you to the home screen. Without the death text. It will tell you your score, and how many points you have. 
- Then when you go to the shop it will still say how many coins you have in some corner. Then you can purchase things.
-
-
  I need to change the UI for the death screen
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
 
+ 
 For the UI change I want there to be multiple buttons 3 specifically.
 One for the shop
 The second one for the controls and how to play
 The third one about and concers you may encounter when playing the game
 
- I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
 
- When you hit an astreoid all astreoids stop moving and you too stop moving. And after a set delay it will say game over. Then after another set delay it will bring you back to the home screen.
+ I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
  */
 
 
