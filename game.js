@@ -38,7 +38,7 @@ const GAMESTAE = {
 
 export default class Game {
   constructor() {
-    this.gamestate = GAMESTAE.MENU;
+    this.gamestate = GAMESTAE.ABOUT;
     this.paused = 0;
     this.gameOver = false;
 
@@ -240,13 +240,35 @@ export default class Game {
           this.goBack2.draw(ctx);
         break;
       case 5:
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
         //creators
         ctx.font = '40px Arial';
-        ctx.fillText('Creators');
+        ctx.fillText('---Created By---', 375, 100);
+
+        //logo drawing
+        ctx.font = '30px Arial';
+        ctx.fillText('Idiot', 300, 180);
+        ctx.fillText('Studios', 300, 215);
+        //box line
+        ctx.fillRect(370, 160, 110, 4);
+        //box
+        ctx.fillStyle = 'black';
+        ctx.fillRect(410, 180, 70, 40);
+        ctx.fillStyle = 'white';
+        ctx.fillRect(414, 184, 62, 32);
+
+
+        //people in the company
+        ctx.font = '40px Arial';
+        ctx.fillText('Creators', 375, 300);
 
         //concerns
         ctx.font = '40px Arial';
-        ctx.fillText('Creators');
+        //ctx.fillText('Concerns', 375, 360);
+        //if game lags consider refreshing. If you delete all your files there is a chance you may loose all data on game.
+
+        this.goBack2.draw(ctx);
         break;
     }
   }
