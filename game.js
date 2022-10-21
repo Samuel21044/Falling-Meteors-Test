@@ -67,7 +67,7 @@ export default class Game {
     this.shop = new Button(this, 250, 430, 250, 45, 'Shop', 7);
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
     this.how = new Button(this, 100, 400, 100, 100, 'How');
-    this.how = new Button(this, 500, 400, 100, 100, 'About');
+    this.about = new Button(this, 550, 400, 100, 100, 'About');
     //shop buttons
     this.shopB1 = new Button(this, 63.75, 140, 165, 35, 'Character', 4);
     this.shopB2 = new Button(this, 292.5, 140, 165, 35, 'Stars', 4);
@@ -86,6 +86,8 @@ export default class Game {
           this.Player.update(deltaTime); 
           //buttons
           this.shop.shopUpdate();
+          this.how.howUpdate();
+          this.about.aboutUpdate();
         break;
       case 2:
           //pause
@@ -165,6 +167,8 @@ export default class Game {
 
           this.Player.draw(ctx);
           this.shop.draw(ctx);
+          this.how.draw(ctx);
+          this.about.draw(ctx);
         break;
       case 2:
           mainBackground(ctx);
