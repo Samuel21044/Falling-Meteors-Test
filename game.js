@@ -223,13 +223,17 @@ export default class Game {
           ctx.font = '40px Arial';
 
           //about game
-          ctx.fillText('About', 375, 100);
-          ctx.font = '20px Arial';
-          ctx.fillText('You controll a spaceship dogging astreoids Survive as long as you can \n Earn points to buy items from the shop', 375, 200);
+          ctx.fillText('About Game', 375, 100);
+          ctx.font = '25px Arial';
+          ctx.fillText('You controll a spaceship dogging astreoids', 375, 180);
+          ctx.fillText('Survive as long as you can', 375, 220);
+          ctx.fillText('Earn points to buy items from the shop', 375, 260);
           //controls
-
-          //ctx.fillText('Controls', 375, 200);
-          //ctx.fillText('Use WASD or arrow keys to move spaceship left or right', 375, 300);
+          ctx.font = '40px Arial';
+          ctx.fillText('Controls', 375, 360);
+          ctx.font = '25px Arial';
+          ctx.fillText('Use WASD or arrow keys to move spaceship left or right', 375, 440);
+          ctx.fillText('Press Esc to pause and unpause game', 375, 480);
         break;
       case 5:
         break;
