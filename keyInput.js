@@ -22,11 +22,6 @@ export default class keyboard {
               game.Score = 0;
               game.gamestate = 2;
             }
-            if(game.gamestate === 2 && game.gameOver) {
-              game.gamestate = 1;
-              player.x = 375 - player.w / 2;
-              game.fallingBlocksL = [];
-            }
           break;
       }
     });
