@@ -29,7 +29,7 @@ export default class fallingBlocks {
       //timers
       setTimeout(() => {
         for(let i = 0; i < game.fallingBlocksL.length; i++) {
-          this.[i]stop();
+          this[i].stop();
         }
       }, 10);
       setTimeout(() => {
