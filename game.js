@@ -91,6 +91,14 @@ export default class Game {
             return;
           }
 
+          //return to home screen faster
+          if(this.timerDeath === 2 || this.timerDeath === 1) {
+            
+          }
+          if(this.timerDeath >= 3) {
+            this.timerDeath = 0;
+          }
+
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
