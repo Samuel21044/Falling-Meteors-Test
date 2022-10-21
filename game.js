@@ -262,13 +262,17 @@ export default class Game {
         //people in the company
         ctx.font = '40px Arial';
         ctx.fillText('Creators', 375, 300);
-        ctx.font = '21px Arial';
+        ctx.font = '20px Arial';
         ctx.fillText('Rodrigo-Owner/Programmer    Junior-Ideas    Brody-Animator    Jack-Animator', 375, 360);
 
         //concerns
         ctx.font = '40px Arial';
-        //ctx.fillText('Concerns', 375, 360);
-        //if game lags consider refreshing. If you delete all your files there is a chance you may loose all data on game.
+        ctx.fillText('Concerns', 375, 460);
+        ctx.font = '25px Arial';
+        ctx.fillText('If game lags consider refreshing', 375, 500);
+        ctx.fillText('If you delete all your files there is a chance',375, 530);
+        ctx.fillText('you may loose all data on game', 375,560);
+        
         this.goBack2.draw(ctx);
         break;
     }
