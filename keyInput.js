@@ -78,7 +78,9 @@ export default class keyboard {
             if(player.speed > 0) player.stop();
           break;
         case 27:
-            game.paused++;
+            if(game.gamestate === 2) {
+              game.paused++;
+            }
           break;
       }
     });
