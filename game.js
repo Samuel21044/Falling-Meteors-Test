@@ -71,6 +71,7 @@ export default class Game {
 
     ];
   }
+  
   update(deltaTime, ctx) {
     switch(this.gamestate) {
       case 1:
