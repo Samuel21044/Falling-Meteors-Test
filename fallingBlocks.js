@@ -31,6 +31,7 @@ export default class fallingBlocks {
       setTimeout(() => {
         game.gamestate = 1;
         game.gameOver = false;
+        player.x = 375 - player.w / 2;
       }, 3000);
   
       //adding points
