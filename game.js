@@ -43,6 +43,7 @@ export default class Game {
   constructor() {
     this.gamestate = GAMESTAE.MENU;
     this.paused = 0;
+    this.gameOver = false;
 
     //blocks
     this.newBlock = true;
@@ -88,8 +89,8 @@ export default class Game {
         break;
       case 2:
           //pause
-          if(this.paused === 2 || this.paused === 1) {
-            return true;
+          if(this.paused === 2 || this.paused === 1 || this.gameOver) {
+            return;
           }
 
           //give a random output
@@ -183,6 +184,13 @@ export default class Game {
           //pause and unpause the screen
           if(this.paused >= 3) {
             this.paused = 0;
+          }
+
+          //game over
+          if(this.gameOver) {
+            ctx.fillStyle = 'rgb(250, 250, 250)';
+            ctx.font = '50px Arial';
+            ctx.fillText('Game Over', 375, 100);
           }
         break;
       case 3:
