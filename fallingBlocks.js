@@ -25,17 +25,14 @@ export default class fallingBlocks {
 
     //collide with player
     if(collisionDetection(2, 0, 0, this, player)) {
-      for(let i = 0; i < game.fallingBlocksL.length; i++) {
+      this.speed = 0;
+      //stop the meteors
+      //for(let i = 0; i < game.fallingBlocksL.length; i++) {
         // I need to change the timing of this depending on the speed of the asteroids
-        game.fallingBlocksL[i].stop();
-      }
-      //timers
-      setTimeout(() => {
-        for(let i = 0; i < game.fallingBlocksL.length; i++) {
-          // I need to change the timing of this depending on the speed of the asteroids
-          game.fallingBlocksL[i].stop();
-        }
-      }, 10);
+        game.fallingBlocks.stop();
+      //}
+
+      //timer
       setTimeout(() => {
         //game.gamestate = 1;
       }, 1000);
