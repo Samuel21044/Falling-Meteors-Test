@@ -67,6 +67,7 @@ export default class Game {
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
     this.how = new Button(this, 170, 215, 60, 150, 'How', 5);
     this.about = new Button(this, 530, 215, 60, 150, 'About', 5);
+    this.goBack2 = new Button(this, 275, 520, 200, 35, 'Back to Menu');
     //shop buttons
     this.shopB1 = new Button(this, 63.75, 140, 165, 35, 'Character', 4);
     this.shopB2 = new Button(this, 292.5, 140, 165, 35, 'Stars', 4);
@@ -130,8 +131,10 @@ export default class Game {
           }
         break;
       case 4:
+          this.goBack2.goBackUpdate();
         break;
       case 5:
+          this.goBack2.goBackUpdate();
         break;
     }
   }
@@ -234,6 +237,7 @@ export default class Game {
           ctx.font = '25px Arial';
           ctx.fillText('Use WASD or arrow keys to move spaceship left or right', 375, 440);
           ctx.fillText('Press Esc to pause and unpause game', 375, 480);
+          this.goBack2.draw(ctx);
         break;
       case 5:
         break;
