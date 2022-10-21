@@ -164,10 +164,11 @@ export default class Game {
         break;
       case 2:
           mainBackground(ctx);
+
+          this.Player.draw(ctx);
           for (let i = 0; i < this.fallingBlocksL.length; i++) {
             this.fallingBlocksL[i].draw(ctx);
           }
-          this.Player.draw(ctx);
 
           //pause
           if(this.paused === 2 || this.paused === 1) {
