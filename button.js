@@ -142,6 +142,54 @@ export default class Button {
       }
     });
   }
+  howUpdate() {
+    canvas.addEventListener('mousemove', (e) => {
+      //defining x and y
+      let x = e.clientX - rect.left; let y = e.clientY - rect.top;
+
+      //mouse is over button
+      if(collisionDetection(1, x, y, this)){
+        this.color = 'rgb(180, 180, 180)';
+      } else {
+        this.color = 'rgb(200, 200, 200)';
+      }
+    });
+    //clicking
+    canvas.addEventListener('click', (e) => {
+      //defining x and y
+      let x = e.clientX - rect.left; let y = e.clientY - rect.top;
+
+      if(this.game.gamestate === 1) {
+        if(collisionDetection(1, x, y, this)){
+          this.game.gamestate = 4;
+        }
+      }
+    });
+  }
+  aboutUpdate() {
+    canvas.addEventListener('mousemove', (e) => {
+      //defining x and y
+      let x = e.clientX - rect.left; let y = e.clientY - rect.top;
+
+      //mouse is over button
+      if(collisionDetection(1, x, y, this)){
+        this.color = 'rgb(180, 180, 180)';
+      } else {
+        this.color = 'rgb(200, 200, 200)';
+      }
+    });
+    //clicking
+    canvas.addEventListener('click', (e) => {
+      //defining x and y
+      let x = e.clientX - rect.left; let y = e.clientY - rect.top;
+
+      if(this.game.gamestate === 1) {
+        if(collisionDetection(1, x, y, this)){
+          this.game.gamestate = 5;
+        }
+      }
+    });
+  }
 
   draw(ctx){
     //draw
