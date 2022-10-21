@@ -27,7 +27,10 @@ export default class fallingBlocks {
     if(collisionDetection(2, 0, 0, this, player)) {
       stop();
 
-      //timers to go back to game
+      //timers
+      setTimeout(() => {
+
+      }, 10);
       setTimeout(() => {
         //game.gamestate = 1;
       }, 1000);
