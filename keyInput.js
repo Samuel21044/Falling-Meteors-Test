@@ -22,9 +22,6 @@ export default class keyboard {
               game.Score = 0;
               game.gamestate = 2;
             }
-
-            //skip to menu
-
             //I sort of have it like the pause button. hwere it increments
           break;
       }
@@ -47,6 +44,12 @@ export default class keyboard {
         case 27:
             if(game.gamestate === 2) {
               game.paused++;
+            }
+          break;
+        case 13:
+            //skip to menu
+            if(game.gamestate === 1 || !game.gameOver) {
+              this.timerDeath++;
             }
           break;
       }

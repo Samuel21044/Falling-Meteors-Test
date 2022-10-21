@@ -35,6 +35,7 @@ export default class Game {
     this.gamestate = GAMESTAE.MENU;
     this.paused = 0;
     this.gameOver = false;
+    this.timerDeath = 0;
 
     //blocks
     this.newBlock = true;
