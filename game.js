@@ -33,6 +33,8 @@ const GAMESTAE = {
   MENU: 1,
   RUNNING: 2,
   SHOP: 3,
+  HOW: 4,
+  ABOUT: 5,
 };
 
 export default class Game {
@@ -64,6 +66,8 @@ export default class Game {
     //buttons 
     this.shop = new Button(this, 250, 430, 250, 45, 'Shop', 7);
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
+    this.how = new Button(this, 100, 400, 100, 100, 'How');
+    this.how = new Button(this, 500, 400, 100, 100, 'About');
     //shop buttons
     this.shopB1 = new Button(this, 63.75, 140, 165, 35, 'Character', 4);
     this.shopB2 = new Button(this, 292.5, 140, 165, 35, 'Stars', 4);
@@ -123,6 +127,10 @@ export default class Game {
           for(let i = 0; i < this.shopItems.length; i++) {
             this.shopItems[i].update();
           }
+        break;
+      case 4:
+        break;
+      case 5:
         break;
     }
   }
@@ -205,6 +213,10 @@ export default class Game {
           ctx.textAlign = 'left';
           ctx.fillText('Points Scored: ' + this.pointsScored,35, 60);
           ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
+        break;
+      case 4:
+        break;
+      case 5:
         break;
     }
   }
