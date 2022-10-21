@@ -172,8 +172,8 @@ export default class Game {
             ctx.font = '50px Arial';
             //ctx.textAlign = 'center';
             ctx.fillText('Game Paused', 375, 100);
-            ctx.font = '30px Arial';
-            ctx.fillText('Click Esc to Unpause', 375, 120);
+            ctx.font = '25px Arial'; ctx.fillStyle = 'rgb(240, 240, 240)';
+            ctx.fillText('Click Esc to Unpause', 375, 140);
           }
           //pause and unpause the screen
           if(this.paused >= 3) {
