@@ -97,6 +97,7 @@ export default class Game {
             this.timerTillHome = false;
           }
           if(this.timerDeath >= 3) {
+            this.timerTillHome = true;
             this.timerDeath = 0;
           }
 
