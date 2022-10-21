@@ -31,6 +31,11 @@ export default class fallingBlocks {
       //adding points
       game.pointsScored = game.Score;
       game.totalPoints += game.pointsScored;
+
+      //timers
+      setTimeout(() => {
+        
+      }, 50);
     }
   }
   draw(ctx) {
