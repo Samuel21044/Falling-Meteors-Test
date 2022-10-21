@@ -22,6 +22,10 @@ export default class keyboard {
               game.Score = 0;
               game.gamestate = 2;
             }
+
+            //skip to menu
+
+            //I sort of have it like the pause button. hwere it increments
           break;
       }
     });
