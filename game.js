@@ -38,7 +38,7 @@ const GAMESTAE = {
 
 export default class Game {
   constructor() {
-    this.gamestate = GAMESTAE.MENU;
+    this.gamestate = GAMESTAE.HOW;
     this.paused = 0;
     this.gameOver = false;
 
@@ -218,6 +218,18 @@ export default class Game {
           ctx.fillText('Total Points: ' + this.totalPoints, 35, 100);
         break;
       case 4:
+          ctx.fillStyle = 'white';
+          ctx.textAlign = 'center';
+          ctx.font = '40px Arial';
+
+          //about game
+          ctx.fillText('About', 375, 100);
+          ctx.font = '20px Arial';
+          ctx.fillText('You controll a spaceship dogging astreoids Survive as long as you can \n Earn points to buy items from the shop', 375, 200);
+          //controls
+
+          //ctx.fillText('Controls', 375, 200);
+          //ctx.fillText('Use WASD or arrow keys to move spaceship left or right', 375, 300);
         break;
       case 5:
         break;
