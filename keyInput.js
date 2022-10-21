@@ -15,6 +15,20 @@ add 2 to the list so now its [1, 2]
 If list contains 1 and 2
 Then PAUSED = true and
 list set to have nothing
+
+Ex-
+let list = [];
+
+keyDown---
+
+if(list === []) {
+  paused = true;
+  list + 1;
+}
+
+if() 
+
+So when it releases it creates a variable true
 */
 export default class keyboard {
   constructor (player, game) {
