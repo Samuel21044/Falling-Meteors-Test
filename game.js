@@ -240,6 +240,13 @@ export default class Game {
           this.goBack2.draw(ctx);
         break;
       case 5:
+        //creators
+        ctx.font = '40px Arial';
+        ctx.fillText('Creators');
+
+        //concerns
+        ctx.font = '40px Arial';
+        ctx.fillText('Creators');
         break;
     }
   }
