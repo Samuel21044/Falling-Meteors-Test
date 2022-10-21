@@ -25,11 +25,12 @@ export default class fallingBlocks {
 
     //collide with player
     if(collisionDetection(2, 0, 0, this, player)) {
-      stop();
 
       //timers
       setTimeout(() => {
-
+        for(let i = 0; i < game.fallingBlocksL.length; i++) {
+          this[i].stop();
+        }
       }, 10);
       setTimeout(() => {
         //game.gamestate = 1;
