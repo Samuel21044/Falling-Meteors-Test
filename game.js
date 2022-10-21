@@ -36,6 +36,7 @@ export default class Game {
     this.paused = 0;
     this.gameOver = false;
     this.timerDeath = 0;
+    this.timerTillHome = true;
 
     //blocks
     this.newBlock = true;
@@ -93,7 +94,7 @@ export default class Game {
 
           //return to home screen faster
           if(this.timerDeath === 2 || this.timerDeath === 1) {
-            
+            this.timerTillHome = false;
           }
           if(this.timerDeath >= 3) {
             this.timerDeath = 0;
