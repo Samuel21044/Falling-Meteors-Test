@@ -31,12 +31,10 @@ export default class fallingBlocks {
 
       //timer
       setTimeout(() => {
-        if(game.timerTillHome) {
-          game.gamestate = 1;
-          game.gameOver = false;
-          player.x = 375 - player.w / 2;
-          game.fallingBlocksL = [];
-        }
+        game.gamestate = 1;
+        game.gameOver = false;
+        player.x = 375 - player.w / 2;
+        game.fallingBlocksL = [];
       }, 3000);
   
       //adding points
