@@ -262,12 +262,13 @@ export default class Game {
         //people in the company
         ctx.font = '40px Arial';
         ctx.fillText('Creators', 375, 300);
+        ctx.font = '25px Arial';
+        ctx.fillText('', 375, 360);
 
         //concerns
         ctx.font = '40px Arial';
         //ctx.fillText('Concerns', 375, 360);
         //if game lags consider refreshing. If you delete all your files there is a chance you may loose all data on game.
-
         this.goBack2.draw(ctx);
         break;
     }
