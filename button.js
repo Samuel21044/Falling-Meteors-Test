@@ -183,7 +183,7 @@ export default class Button {
       //defining x and y
       let x = e.clientX - rect.left; let y = e.clientY - rect.top;
 
-      if(this.game.gamestate === 3) {
+      if(this.game.gamestate === 3 || this.game.gamestate === 4 || this.game.gamestate == 5) {
         if(collisionDetection(1, x, y, this)){
           this.game.gamestate = 1;
         }
