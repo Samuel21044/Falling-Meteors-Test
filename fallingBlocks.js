@@ -25,12 +25,13 @@ export default class fallingBlocks {
 
     //collide with player
     if(collisionDetection(2, 0, 0, this, player)) {
-      //do something to stop the meteors
+      //do something
 
       //timer
       setTimeout(() => {
         //game.gamestate = 1;
-      }, 1000);
+        game.gameOver = false;
+      }, 3000);
   
       //adding points
       game.pointsScored = game.Score;
