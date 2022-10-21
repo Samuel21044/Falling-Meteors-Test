@@ -29,7 +29,12 @@ if(list === []) {
 if() 
 
 So when it releases it creates a variable true
+
+
+I have a number that increases 
 */
+
+
 export default class keyboard {
   constructor (player, game) {
 
@@ -55,9 +60,6 @@ export default class keyboard {
               game.gamestate = 2;
             }
           break;
-        case 27:
-            //do something
-          break;
       }
     });
 
@@ -74,6 +76,9 @@ export default class keyboard {
           break;
         case 68:
             if(player.speed > 0) player.stop();
+          break;
+        case 27:
+            game.paused++;
           break;
       }
     });

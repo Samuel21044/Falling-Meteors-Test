@@ -36,7 +36,7 @@ const GAMESTAE = {
 export default class Game {
   constructor() {
     this.gamestate = GAMESTAE.MENU;
-    this.paused = false;
+    this.paused = 0;
 
     //blocks
     this.newBlock = true;
@@ -71,7 +71,7 @@ export default class Game {
 
     ];
   }
-  
+
   update(deltaTime, ctx) {
     switch(this.gamestate) {
       case 1:
@@ -82,8 +82,8 @@ export default class Game {
         break;
       case 2:
           //pause
-          if(this.paused) {
-            return;
+          if(this.paused === 2 || this.paused === 1) {
+            return true;
           }
 
           //give a random output
@@ -163,9 +163,13 @@ export default class Game {
           this.Player.draw(ctx);
 
           //pause
-          if(this.paused) {
+          if(this.paused === 2 || this.paused === 1) {
             ctx.fillStyle = 'rgb(20, 20, 20, 0.5)';
             ctx.fillRect(0, 0, 750, 640);
+          }
+          //pause and unpause the screen
+          if(this.paused >= 3) {
+            this.paused = 0;
           }
         break;
       case 3:
