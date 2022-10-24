@@ -9,6 +9,8 @@
 
  if key is not pressed then do the 3 second wait. Else dont do it
 
+
+ Need to fix pause screen when game is over
  */
 
 
@@ -181,15 +183,17 @@ export default class Game {
 
           //pause
           if(this.paused === 2 || this.paused === 1) {
-            ctx.fillStyle = 'rgb(20, 20, 20, 0.5)';
-            ctx.fillRect(0, 0, 750, 640);
-            //text
-            ctx.fillStyle = 'rgb(250, 250, 250)';
-            ctx.font = '50px Arial';
-            //ctx.textAlign = 'center';
-            ctx.fillText('Game Paused', 375, 100);
-            ctx.font = '25px Arial'; ctx.fillStyle = 'rgb(240, 240, 240)';
-            ctx.fillText('Click Esc to Unpause', 375, 140);
+            if(!this.gameOver) {
+              ctx.fillStyle = 'rgb(20, 20, 20, 0.5)';
+              ctx.fillRect(0, 0, 750, 640);
+              //text
+              ctx.fillStyle = 'rgb(250, 250, 250)';
+              ctx.font = '50px Arial';
+              //ctx.textAlign = 'center';
+              ctx.fillText('Game Paused', 375, 100);
+              ctx.font = '25px Arial'; ctx.fillStyle = 'rgb(240, 240, 240)';
+              ctx.fillText('Click Esc to Unpause', 375, 140);
+            }
           }
           //pause and unpause the screen
           if(this.paused >= 3) {

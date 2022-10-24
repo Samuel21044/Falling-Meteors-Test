@@ -47,7 +47,9 @@ export default class keyboard {
           break;
         case 27:
             if(game.gamestate === 2) {
-              game.paused++;
+              if(!game.gameOver) {
+                game.paused++;
+              }
             }
           break;
         case 13:
