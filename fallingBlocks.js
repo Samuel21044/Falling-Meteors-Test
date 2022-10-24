@@ -36,11 +36,11 @@ export default class fallingBlocks {
           game.gameOver = false;
           player.x = 375 - player.w / 2;
           game.fallingBlocksL = [];
+          game.timerTillPoints = 600;
         }
       }, 1000);
   
       //adding points
-      game.pointsScored = game.Score;
       game.totalPoints += game.pointsScored;
     }
   }

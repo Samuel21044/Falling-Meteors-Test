@@ -109,7 +109,11 @@ export default class Game {
           }
 
           //point timer
-          
+          this.timerTillPoints--;
+          if(this.timerTillPoints <= 0) {
+            this.pointsScored++;
+            this.timerTillPoints = 600;
+          }
 
           //updating other objects n stuff
           this.Player.update(deltaTime);

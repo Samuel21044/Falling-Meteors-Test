@@ -26,6 +26,7 @@ export default class keyboard {
               game.gamestate = 1;
               player.x = 375 - player.w / 2;
               game.fallingBlocksL = [];
+              game.timerTillPoints = 600;
             }
           break;
       }
