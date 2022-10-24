@@ -4,7 +4,7 @@ import { collisionDetection } from './collide.js';
 export default class fallingBlocks {
   constructor(x, y, w, h) {
     this.x = x; this.y = y;
-    this.w = 20; this.h = 45;
+    this.w = 15; this.h = 40;
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
     //random between normal and on fire astreoids
@@ -49,7 +49,7 @@ export default class fallingBlocks {
   }
   draw(ctx) {
     //if(this.choose === 1) {
-      ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+5, this.h+5);
+      ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+10, this.h+10);
     //}
     //if(this.choose === 2) {
       //ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+5, this.h+5);
