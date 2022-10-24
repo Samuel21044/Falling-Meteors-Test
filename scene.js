@@ -32,4 +32,8 @@ export function mainBackground(ctx) {
   for(let i = 0; i < stars.length; i++) {
     sun[i].drawSun(ctx);
   }
+
+  //planets
+  ctx.drawImage(document.getElementById('earth'), 150, 130, 60, 60);
+  ctx.drawImage(document.getElementById('jupiter'), 500, 280, 120, 120);
 }
