@@ -5,8 +5,6 @@
  
  I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
  I also want to add a backgroiund for the menu
-
- Fix the score
  */
 
 
