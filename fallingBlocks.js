@@ -7,6 +7,8 @@ export default class fallingBlocks {
     this.w = 20; this.h = 45;
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
+    //random between normal and on fire astreoids
+    this.choose = Math.round(Math.random() * 2);
   }
 
   moveDown() {
@@ -46,6 +48,11 @@ export default class fallingBlocks {
     }
   }
   draw(ctx) {
+    if(this.choose === 1) {
     ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+5, this.h+5);
+    }
+    if(this.choose === 2) {
+      ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+5, this.h+5);
+    }
   }
 }
