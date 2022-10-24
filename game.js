@@ -8,6 +8,8 @@
  I also want to add a backgroiund for the menu
 
  if key is not pressed then do the 3 second wait. Else dont do it
+
+ Fix the score
  */
 
 
