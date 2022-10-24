@@ -22,6 +22,11 @@ export default class keyboard {
               game.Score = 0;
               game.gamestate = 2;
             }
+            if(game.gameOver === true) {
+              game.gamestate = 1;
+              player.x = 375 - player.w / 2;
+              game.fallingBlocksL = [];
+            }
           break;
       }
     });
@@ -43,6 +48,11 @@ export default class keyboard {
         case 27:
             if(game.gamestate === 2) {
               game.paused++;
+            }
+          break;
+        case 13:
+            if(game.gamestate === 1) {
+              game.gameOver = false;
             }
           break;
       }
