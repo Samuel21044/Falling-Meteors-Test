@@ -108,7 +108,6 @@ export default class Game {
           //add a score based on a timer
           this.timerScore--;
           if(this.timerScore <= 0) {
-            console.log('df');
             this.Score++;
             this.timerScore = 100;
           }
