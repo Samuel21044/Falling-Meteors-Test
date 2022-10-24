@@ -2,12 +2,9 @@
  I need to change how often you get points because it is way too often rn
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
- I need a way to skip the wait when returning to the menu
  
  I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
  I also want to add a backgroiund for the menu
-
- if key is not pressed then do the 3 second wait. Else dont do it
 
  Fix the score
  */
@@ -111,6 +108,7 @@ export default class Game {
           //add a score based on a timer
           this.timerScore--;
           if(this.timerScore <= 0) {
+            console.log('df');
             this.Score++;
             this.timerScore = 100;
           }
