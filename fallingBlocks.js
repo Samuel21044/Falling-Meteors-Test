@@ -37,6 +37,7 @@ export default class fallingBlocks {
           player.x = 375 - player.w / 2;
           game.fallingBlocksL = [];
           game.timerTillPoints = 600;
+          //add save file here for points
         }
       }, 1000);
   
