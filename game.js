@@ -1,5 +1,4 @@
 /**
- I need to change how often you get points because it is way too often rn
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
  */
