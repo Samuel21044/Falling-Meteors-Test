@@ -2,6 +2,8 @@
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
  Change the image of the astreoids
+
+ Add something that keeps track of the score in the top corner of smth
  */
 
 
