@@ -50,6 +50,7 @@ export default class Game {
     this.highScore = 0;
 
     //points
+    this.timerTillPoints = 600;
     this.pointsScored = 0;
     this.totalPoints = 0;
 
