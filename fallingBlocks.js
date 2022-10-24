@@ -37,7 +37,7 @@ export default class fallingBlocks {
           player.x = 375 - player.w / 2;
           game.fallingBlocksL = [];
         }
-      }, 3000);
+      }, 1000);
   
       //adding points
       game.pointsScored = game.Score;
