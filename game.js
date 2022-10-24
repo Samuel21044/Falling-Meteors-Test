@@ -4,6 +4,9 @@
  Change the image of the astreoids
 
  Add something that keeps track of the score in the top corner of smth
+
+
+ Create an image for the spaceship
  */
 
 
