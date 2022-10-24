@@ -18,7 +18,7 @@ export default class keyboard {
           break;
         //starting a new game
         case 13:
-            if(game.gamestate === 1) {
+            if(game.gamestate === 1 && !game.gameOver) {
               game.Score = 0;
               game.gamestate = 2;
             }
