@@ -16,7 +16,7 @@ import Shop from './shop.js';
 import { mainBackground } from './scene.js';
 
 //save file
-import { saveScore } from './save.js';
+import { saveScore, savePoints } from './save.js';
 
 //game scenes
 const GAMESTAE = {
