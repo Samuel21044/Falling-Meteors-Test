@@ -108,6 +108,9 @@ export default class Game {
             this.timerScore = 100;
           }
 
+          //point timer
+          
+
           //updating other objects n stuff
           this.Player.update(deltaTime);
         break;
