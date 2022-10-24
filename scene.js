@@ -36,4 +36,7 @@ export function mainBackground(ctx) {
   //planets
   ctx.drawImage(document.getElementById('earth'), 150, 130, 60, 60);
   ctx.drawImage(document.getElementById('jupiter'), 500, 280, 120, 120);
+  ctx.fillStyle = 'rgb(20, 20, 20, 0.3)';
+  ctx.fillRect(150, 130, 60, 60);
+  ctx.fillRect(500, 280, 120, 120);
 }

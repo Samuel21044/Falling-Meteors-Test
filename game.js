@@ -2,9 +2,6 @@
  I need to change how often you get points because it is way too often rn
  I need to find out how to store items in a list so that I can use one single file 
  I need to add items into the shop
- 
- I want jupiter and earth on the screen in front of the stars. Then in the top right corner I want a little bit of the sun
- I also want to add a backgroiund for the menu
  */
 
 
