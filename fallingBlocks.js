@@ -49,10 +49,10 @@ export default class fallingBlocks {
   }
   draw(ctx) {
     //if(this.choose === 1) {
-    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+5, this.h+5);
+      ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+5, this.h+5);
     //}
     //if(this.choose === 2) {
-     // ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+5, this.h+5);
+      //ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+5, this.h+5);
     //}
   }
 }
