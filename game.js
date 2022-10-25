@@ -3,7 +3,9 @@ I need to find out how to store items in a list so that I can use one single fil
 I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
 
+
 //important
+|||||||||||
 
 //asteroids
 Have two astreoids to have both of them in the screen
