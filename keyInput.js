@@ -25,7 +25,7 @@ export default class keyboard {
             if(game.gameOver === true) {
               game.gamestate = 1;
               player.x = 375 - player.w / 2;
-              game.meteorsL = []; game.meteorsOnFireL = [];
+              game.meteorsL = [];
               game.timerTillPoints = 600;
             }
           break;
