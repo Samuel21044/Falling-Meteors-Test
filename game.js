@@ -4,8 +4,11 @@ I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
 
 //important
+
+//asteroids
 Have two astreoids to have both of them in the screen
-Change the image of the astreoids
+Fix collision
+
 Create an image for the spaceship
  */
 
