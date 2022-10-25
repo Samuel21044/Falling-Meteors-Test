@@ -4,11 +4,11 @@ import { collisionDetection } from './collide.js';
 export default class fallingBlocks {
   constructor(x, y, w, h, type) {
     this.x = x; this.y = y;
-    this.w = w; this.h = h;
-    
+    this.w = 15; this.h = 40;
+    this.type = type;
+
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
-    this.type = type;
   }
 
   moveDown() {
@@ -48,11 +48,6 @@ export default class fallingBlocks {
     }
   }
   draw(ctx) {
-    //if(this.type === 1) {
-      ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+10, this.h+10);
-   // }
-    //if(this.type === 2) {
-    //  ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+10, this.h+10);
-    //}
+    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+10, this.h+10);
   }
 }
