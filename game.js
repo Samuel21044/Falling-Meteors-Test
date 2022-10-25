@@ -2,6 +2,7 @@
 I need to find out how to store items in a list so that I can use one single file 
 I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
+Fix point problem
 
 
 //important
@@ -9,7 +10,7 @@ Add something that keeps track of the score in the top corner of smth
 
 //asteroids
 Have two astreoids to have both of them in the screen
-Fix collision
+Fix collision for asteroids
 
 Create an image for the spaceship
  */
