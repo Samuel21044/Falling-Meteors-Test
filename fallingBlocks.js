@@ -2,13 +2,12 @@
 import { collisionDetection } from './collide.js';
 
 export default class fallingBlocks {
-  constructor(x, y, w, h) {
+  constructor(x, y, w, h, type) {
     this.x = x; this.y = y;
-    this.w = 15; this.h = 40;
+    this.w = w; this.h = h;
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
-    //random between normal and on fire astreoids
-    this.choose = Math.round(Math.random() * 2);
+    this.type = type;
   }
 
   moveDown() {
@@ -48,11 +47,11 @@ export default class fallingBlocks {
     }
   }
   draw(ctx) {
-    //if(this.choose === 1) {
+    if(this.type === 1) {
+      ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+10, this.h+10);
+    }
+    if(this.type === 2) {
       ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w+10, this.h+10);
-    //}
-    //if(this.choose === 2) {
-      //ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w+5, this.h+5);
-    //}
+    }
   }
 }

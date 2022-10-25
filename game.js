@@ -103,7 +103,7 @@ export default class Game {
 
           let shootFire = Math.round(Math.random() * 6);
           if(shootFire === 1) {
-            this.meteorsOnFireL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50));
+            this.meteorsOnFireL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 15, 40, 2));
           }
 
           //having the bullet things update
