@@ -98,7 +98,7 @@ export default class Game {
           let shoot = Math.round(Math.random() * 6);
           if(shoot === 1) {
             //how fast the meteors shoot out per second
-            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50));
+            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 25, 1));
           }
 
           let shootFire = Math.round(Math.random() * 6);
