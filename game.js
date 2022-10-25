@@ -10,7 +10,7 @@ Fix point problem
 
 //asteroids
 Have two astreoids to have both of them in the screen
-Fix collision for asteroids
+Fix collision for asteroids and spaceship
 
 Create an image for the spaceship
  */
