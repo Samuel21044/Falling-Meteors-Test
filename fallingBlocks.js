@@ -2,10 +2,9 @@
 import { collisionDetection } from './collide.js';
 
 export default class fallingBlocks {
-  constructor(x, y, w, h, type) {
+  constructor(x, y) {
     this.x = x; this.y = y;
     this.w = 15; this.h = 40;
-    this.type = type;
 
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;

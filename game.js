@@ -101,21 +101,12 @@ export default class Game {
             this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 25, 1));
           }
 
-          let shootFire = Math.round(Math.random() * 6);
-          if(shootFire === 1) {
-            this.meteorsOnFireL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 15, 40, 2));
-          }
-
           //having the bullet things update
           for (let i = 0; i < this.meteorsL.length; i++) {
             this.meteorsL[i].moveDown();
             this.meteorsL[i].update(deltaTime, this.meteorsL, this.Player, this);
           }
-          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
-            this.meteorsOnFireL[i].moveDown();
-            this.meteorsOnFireL[i].update(deltaTime, this.meteorsOnFireL, this.Player, this);
-          }
-          
+
           //add a score based on a timer
           this.timerScore--;
           if(this.timerScore <= 0) {
@@ -193,9 +184,6 @@ export default class Game {
           this.Player.draw(ctx);
           for (let i = 0; i < this.meteorsL.length; i++) {
             this.meteorsL[i].draw(ctx);
-          }
-          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
-            this.meteorsOnFireL[i].draw(ctx);
           }
 
           //pause
