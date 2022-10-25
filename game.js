@@ -41,8 +41,8 @@ export default class Game {
 
     //blocks
     this.newBlock = true;
-    this.FallingBlocks = new fallingBlocks();
-    this.fallingBlocksL = [];
+    this.meteors = new fallingBlocks();
+    this.meteorsL = [];
 
     //other stuff
     this.Player = new player(500, 545);
@@ -97,14 +97,14 @@ export default class Game {
           //give a random output
           let shoot = Math.round(Math.random() * 6);
           if (shoot === 1) {
-            //how fast the bullets shoot out per second
-            this.fallingBlocksL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.FallingBlocks.w - 1) + 1), -50));
+            //how fast the meteors shoot out per second
+            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50));
           }
 
           //having the bullet things update
-          for (let i = 0; i < this.fallingBlocksL.length; i++) {
-            this.fallingBlocksL[i].moveDown();
-            this.fallingBlocksL[i].update(deltaTime, this.fallingBlocksL, this.Player, this);
+          for (let i = 0; i < this.meteorsL.length; i++) {
+            this.meteorsL[i].moveDown();
+            this.meteorsL[i].update(deltaTime, this.meteorsL, this.Player, this);
           }
           
           //add a score based on a timer
@@ -182,8 +182,8 @@ export default class Game {
           mainBackground(ctx);
 
           this.Player.draw(ctx);
-          for (let i = 0; i < this.fallingBlocksL.length; i++) {
-            this.fallingBlocksL[i].draw(ctx);
+          for (let i = 0; i < this.meteorsL.length; i++) {
+            this.meteorsL[i].draw(ctx);
           }
 
           //pause
