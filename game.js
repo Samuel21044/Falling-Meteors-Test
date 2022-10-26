@@ -63,7 +63,7 @@ export default class Game {
     this.totalPoints = 0;
 
     //buttons 
-    this.shop = new Button(this, 250, 430, 250, 45, 'Shop', 7);
+    this.shop = new Button(this, 250, 430, 250, 45, 'Coming Soon', 7);
     this.goBack = new Button(this, 275, 50, 200, 35, 'Back to Menu');
     this.how = new Button(this, 170, 215, 60, 150, 'How', 5);
     this.about = new Button(this, 530, 215, 60, 150, 'About', 5);

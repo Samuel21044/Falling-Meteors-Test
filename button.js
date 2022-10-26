@@ -35,7 +35,8 @@ export default class Button {
 
       if(this.game.gamestate === 1) {
         if(collisionDetection(1, x, y, this)){
-          this.game.gamestate = 3;
+         // this.game.gamestate = 3;
+         //do something
         }
       }
     });
