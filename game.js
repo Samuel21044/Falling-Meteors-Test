@@ -45,7 +45,6 @@ export default class Game {
     this.newBlock = true;
     this.meteors = new fallingBlocks();
     this.meteorsL = [];
-    this.meteorsOnFireL = [];
 
     //other stuff
     this.Player = new player(500, 545);
@@ -98,22 +97,13 @@ export default class Game {
           }
 
           //give a random output
-          let shootFire = Math.round(Math.random() * 6);
-          if(shootFire === 1) {
+          let shoot = Math.round(Math.random() * 6);
+          if(shoot === 1) {
             //how fast the meteors shoot out per second
-            this.meteorsOnFireL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 20));
-          }
-          let shootNorm = Math.round(Math.random() * 6);
-          if(shootFire === 1) {
-            //how fast the meteors shoot out per second
-            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 25, 1));
+            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50));
           }
 
           //having the bullet things update
-          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
-            this.meteorsOnFireL[i].moveDown();
-            this.meteorsOnFireL[i].update(deltaTime, this.meteorsL, this.Player, this);
-          }
           for (let i = 0; i < this.meteorsL.length; i++) {
             this.meteorsL[i].moveDown();
             this.meteorsL[i].update(deltaTime, this.meteorsL, this.Player, this);
@@ -194,11 +184,8 @@ export default class Game {
           mainBackground(ctx);
 
           this.Player.draw(ctx);
-          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
-            this.meteorsOnFireL[i].drawFire(ctx);
-          }
           for (let i = 0; i < this.meteorsL.length; i++) {
-            this.meteorsL[i].drawNorm(ctx);
+            this.meteorsL[i].draw(ctx);
           }
 
           //pause
