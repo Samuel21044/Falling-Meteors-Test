@@ -47,6 +47,6 @@ export default class fallingBlocks {
     }
   }
   draw(ctx) {
-    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-10, this.w, this.h+10);
+    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-20, this.w, this.h+10);
   }
 }
