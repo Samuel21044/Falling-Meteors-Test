@@ -2,9 +2,9 @@
 import { collisionDetection } from './collide.js';
 
 export default class fallingBlocks {
-  constructor(x, y) {
+  constructor(x, y, w, h) {
     this.x = x; this.y = y;
-    this.w = 25; this.h = 50;
+    this.w = w; this.h = h;
 
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
@@ -46,7 +46,10 @@ export default class fallingBlocks {
       game.totalPoints += game.pointsScored;
     }
   }
-  draw(ctx) {
+  drawNorm(ctx) {
+    ctx.drawImage(document.getElementById('meteor'), this.x, this.y, this.w, this.h);
+  }
+  drawFire(ctx) {
     ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y, this.w, this.h);
   }
 }
