@@ -30,7 +30,7 @@ export default class fallingBlocks {
       setTimeout(() => {
         game.gameOver = true;
         player.stop();
-      }, 20);
+      }, 10);
 
       //timer
       setTimeout(() => {
