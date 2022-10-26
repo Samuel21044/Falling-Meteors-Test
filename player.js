@@ -1,7 +1,7 @@
 export default class player {
   constructor(x, y) {
     this.x = x; this.y = y;
-    this.w = 65; this.h = 97.5;
+    this.w = 35; this.h = 87.5;
     this.speed = 0;
     this.maxSpeed = 120;
   }
@@ -30,6 +30,6 @@ export default class player {
     ctx.fillStyle = 'rgb(225, 125, 20)';
     //square itself
     ctx.fillRect(this.x + 5, this.y + 5, this.w-10, this.h-10);*/
-    ctx.drawImage(document.getElementById('defaultRocketShip'), this.x, this.y, this.w, this.h);
+    ctx.drawImage(document.getElementById('defaultRocketShip'), this.x-18, this.y-10, this.w+30, this.h+10);
   }
 }
