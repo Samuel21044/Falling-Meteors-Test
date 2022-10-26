@@ -27,10 +27,8 @@ export default class fallingBlocks {
 
     //collide with player
     if(collisionDetection(2, 0, 0, this, player)) {
-      setTimeout(() => {
-        game.gameOver = true;
-        player.stop();
-      }, 10);
+      game.gameOver = true;
+      player.stop();
 
       //timer
       setTimeout(() => {
