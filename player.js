@@ -20,8 +20,8 @@ export default class player {
     this.x += this.speed / deltaTime;
 
     //constrain
-    if(this.x < 0) this.x = 0;
-    if(this.x+this.w > 750) this.x = 750-this.w;
+    if(this.x < 0 + 16) this.x = 16;
+    if(this.x+this.w > 750-11) this.x = 750-this.w-11;
   }
   draw(ctx) {
     /*ctx.fillStyle = 'black';
