@@ -3,7 +3,7 @@ I need to find out how to store items in a list so that I can use one single fil
 I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
 
-Fix point problem---
+Fix collision problem---
 For meteors decrease the width and height by a certain amount and draw the image in the center using  ---> this.x + this.w / 2
 And in drawing the image itself I manually add some stuff to have the collision smaller but the width and height the same
 I also do this with the rocket bc it is too big     -10 for w and h
@@ -99,13 +99,13 @@ export default class Game {
           let shoot = Math.round(Math.random() * 6);
           if(shoot === 1) {
             //how fast the meteors shoot out per second
-            this.meteorsL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 25, 1));
+            this.meteorsOnFireL.push(new fallingBlocks(Math.round(Math.random() * (750 - this.meteors.w - 1) + 1), -50, 25, 25, 1));
           }
 
           //having the bullet things update
-          for (let i = 0; i < this.meteorsL.length; i++) {
-            this.meteorsL[i].moveDown();
-            this.meteorsL[i].update(deltaTime, this.meteorsL, this.Player, this);
+          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
+            this.meteorsOnFireL[i].moveDown();
+            this.meteorsOnFireL[i].update(deltaTime, this.meteorsL, this.Player, this);
           }
 
           //add a score based on a timer
@@ -183,8 +183,8 @@ export default class Game {
           mainBackground(ctx);
 
           this.Player.draw(ctx);
-          for (let i = 0; i < this.meteorsL.length; i++) {
-            this.meteorsL[i].draw(ctx);
+          for (let i = 0; i < this.meteorsOnFireL.length; i++) {
+            this.meteorsOnFireL[i].draw(ctx);
           }
 
           //pause
