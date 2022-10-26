@@ -18,6 +18,13 @@ Have two astreoids to have both of them in the screen
 Fix collision for asteroids and spaceship
 
 Create an image for the spaceship
+
+
+||||||||||||||
+For the spaceship
+
+I translate the x by a little bit Ex:--- this.x-10
+Then I have the wdith and height cut down by a little bit. And for the image I personally make the width and height whatever I want
  */
 
 
