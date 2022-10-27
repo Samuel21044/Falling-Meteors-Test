@@ -33,7 +33,5 @@ export default class player {
 
     //the width and height is for the collision of the rocket ship. Not the actual rocket itslef
     ctx.drawImage(document.getElementById('defaultRocketShip'), this.x-17.5, this.y-15, 65, 97.5);
-    ctx.fillStyle = 'rgb(255, 255, 255, 0.3)';
-    ctx.fillRect(this.x, this.y, this.w, this.h);
   }
 }
