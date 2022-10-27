@@ -5,6 +5,7 @@ export default class fallingBlocks {
   constructor(x, y) {
     this.x = x; this.y = y;
     this.w = 25; this.h = 30;
+    this.Iw = 25; this.Ih = 50;
 
     this.speed = 0; this.maxSpeed = 100;
     this.timerTillNextBlock = 50;
@@ -48,6 +49,6 @@ export default class fallingBlocks {
   }
   draw(ctx) {
     //the width and height is for the collision of the rocket ship. Not the actual rocket itslef
-    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-20, 25, 50);
+    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-20, this.Iw, this.Ih);
   }
 }
