@@ -31,5 +31,7 @@ export default class player {
     //square itself
     ctx.fillRect(this.x + 5, this.y + 5, this.w-10, this.h-10);*/
     ctx.drawImage(document.getElementById('defaultRocketShip'), this.x-18, this.y-10, this.w+30, this.h+10);
+    ctx.fillStyle = 'rgb(255, 255, 255, 0.3)';
+    ctx.fillRect(this.x, this.y, this.w, this.h);
   }
 }

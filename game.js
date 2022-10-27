@@ -9,6 +9,11 @@ I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
 
 Fix collision with fire for meteors
+
+So the collision of the meteor is too big so I have to shrink it.
+
+
+Or what I could do is I could add the image but then I add a rectangle showing the hitbox to make sure im doing this bs right
  */
 
 

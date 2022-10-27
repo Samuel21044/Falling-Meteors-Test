@@ -27,8 +27,8 @@ export default class fallingBlocks {
 
     //collide with player
     if(collisionDetection(2, 0, 0, this, player)) {
-      game.gameOver = true;
-      player.stop();
+      //game.gameOver = true;
+      //player.stop();
 
       //timer
       setTimeout(() => {
@@ -48,5 +48,7 @@ export default class fallingBlocks {
   }
   draw(ctx) {
     ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-30, this.w, this.h+20);
+    ctx.fillStyle = 'rgb(255, 255, 255, 0.3)';
+    ctx.fillRect(this.x, this.y, this.w, this.h);
   }
 }
