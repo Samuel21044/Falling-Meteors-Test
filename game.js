@@ -51,7 +51,7 @@ export default class Game {
     this.meteorsL = [];
 
     //other stuff
-    this.Player = new player(500, 545);
+    this.Player = new player(360, 545);
 
     this.Keyboard = new keyboard(this.Player, this);
     new keyboard(this.Player, this);
@@ -153,6 +153,8 @@ export default class Game {
   draw(ctx) {
     switch(this.gamestate) {
       case 1:
+          ctx.fillStyle = 'white';
+          ctx.fillRect(375, 0, 1, 640);
           //displays the saved score of the player
           this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
