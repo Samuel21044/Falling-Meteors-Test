@@ -1,18 +1,9 @@
 /**
-Fix collision problem---
-For meteors decrease the width and height by a certain amount and draw the image in the center using  ---> this.x + this.w / 2
-And in drawing the image itself I manually add some stuff to have the collision smaller but the width and height the same
-I also do this with the rocket bc it is too big     -10 for w and h
-
 I need to find out how to store items in a list so that I can use one single file 
 I need to add items into the shop
 Add something that keeps track of the score in the top corner of smth
 
-Fix collision with fire for meteors
-
-So the collision of the meteor is too big so I have to shrink it.
-
-
+How to fix future collision problems
 Or what I could do is I could add the image but then I add a rectangle showing the hitbox to make sure im doing this bs right
  */
 
