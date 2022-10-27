@@ -47,7 +47,8 @@ export default class fallingBlocks {
     }
   }
   draw(ctx) {
-    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-30, this.w, this.h+20);
+    //the width and height is for the collision of the rocket ship. Not the actual rocket itslef
+    ctx.drawImage(document.getElementById('meteorOnFire'), this.x, this.y-20, 25, 50);
     ctx.fillStyle = 'rgb(255, 255, 255, 0.3)';
     ctx.fillRect(this.x, this.y, this.w, this.h);
   }
