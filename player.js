@@ -21,8 +21,8 @@ export default class player {
     this.x += this.speed / deltaTime;
 
     //constrain
-    if(this.x < 0 + 16) this.x = 16;
-    if(this.x+this.w > 750-11) this.x = 750-this.w-11;
+    if(this.x < 0 + 17.5) this.x = 17.5;
+    if(this.x+this.w > 750-17.5) this.x = 750-this.w-17.5;
   }
   draw(ctx) {
     //the width and height is for the collision of the rocket ship. Not the actual rocket itslef
