@@ -153,8 +153,6 @@ export default class Game {
   draw(ctx) {
     switch(this.gamestate) {
       case 1:
-          ctx.fillStyle = 'white';
-          ctx.fillRect(375, 0, 1, 640);
           //displays the saved score of the player
           this.highScore = JSON.parse(localStorage.getItem('savedScoreFMTest'));
 
